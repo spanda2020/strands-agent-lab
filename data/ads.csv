@@ -1,0 +1,10 @@
+date,campaign_id,campaign_name,impressions,clicks,spend,conversions,revenue
+2026-09-20,C001,Sports Shoes,10000,500,120,25,500
+2026-09-21,C001,Sports Shoes,12000,540,135,27,540
+2026-09-22,C001,Sports Shoes,11000,440,130,20,400
+2026-09-20,C002,Running Gear,20000,600,250,18,360
+2026-09-21,C002,Running Gear,22000,620,270,19,380
+2026-09-22,C002,Running Gear,21000,525,260,16,320
+2026-09-20,C003,Fitness App,8000,560,100,35,700
+2026-09-21,C003,Fitness App,9000,585,110,38,760
+2026-09-22,C003,Fitness App,10000,600,125,40,800
