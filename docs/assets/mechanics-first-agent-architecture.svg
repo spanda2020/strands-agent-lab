@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Mechanics-First Agent Engineering architecture</title>
+  <desc id="desc">A user request enters an orchestrator, which routes to a basic agent or an ads data analyst. The ads agent can call a deterministic campaign metrics tool backed by pandas and a CSV file.</desc>
+  <defs>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7048e8"/></marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1971c2"/></marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#e8590c"/></marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#0f766e"/></marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-opacity=".12"/></filter>
+    <style>
+      .title{font:700 38px Arial,sans-serif;fill:#1e1e1e}.subtitle{font:22px Arial,sans-serif;fill:#495057}.box-title{font:700 26px Arial,sans-serif}.body{font:18px Arial,sans-serif}.small{font:16px Arial,sans-serif}.arrow-label{font:17px Arial,sans-serif;font-weight:600}.box{filter:url(#shadow);stroke-width:2.5}.line{fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+  <rect width="1600" height="1000" fill="#fff"/>
+  <text x="800" y="68" text-anchor="middle" class="title">Mechanics-First Agent Engineering</text>
+  <text x="800" y="112" text-anchor="middle" class="subtitle">Make the loop visible. Understand the mechanics. Then scale.</text>
+
+  <rect x="650" y="155" width="300" height="75" rx="16" fill="#dbeafe" stroke="#1971c2" class="box"/>
+  <text x="800" y="202" text-anchor="middle" class="box-title" fill="#0b4f8a">User Request</text>
+  <path d="M800 230 L800 298" stroke="#1971c2" marker-end="url(#arrow-blue)" class="line"/>
+
+  <rect x="600" y="310" width="400" height="115" rx="18" fill="#ede9fe" stroke="#7048e8" class="box"/>
+  <text x="800" y="350" text-anchor="middle" class="box-title" fill="#4c1d95">Orchestrator Agent</text>
+  <text x="800" y="383" text-anchor="middle" class="body" fill="#5f3dc4"><tspan x="800">Decision 1: Which specialist</tspan><tspan x="800" dy="23">should handle this request?</tspan></text>
+
+  <path d="M700 425 C650 470 520 490 390 520" stroke="#7048e8" marker-end="url(#arrow-purple)" class="line"/>
+  <text x="535" y="480" text-anchor="middle" class="arrow-label" fill="#5f3dc4">General</text>
+  <path d="M900 425 C950 470 1080 490 1210 520" stroke="#7048e8" marker-end="url(#arrow-purple)" class="line"/>
+  <text x="1065" y="480" text-anchor="middle" class="arrow-label" fill="#5f3dc4">Advertising</text>
+
+  <rect x="130" y="522" width="520" height="120" rx="18" fill="#dcfce7" stroke="#2b8a3e" class="box"/>
+  <text x="390" y="563" text-anchor="middle" class="box-title" fill="#166534">Basic Agent</text>
+  <text x="390" y="599" text-anchor="middle" class="body" fill="#2b8a3e"><tspan x="390">Answers general knowledge</tspan><tspan x="390" dy="23">and everyday questions</tspan></text>
+
+  <rect x="950" y="522" width="520" height="120" rx="18" fill="#ffedd5" stroke="#e8590c" class="box"/>
+  <text x="1210" y="563" text-anchor="middle" class="box-title" fill="#9a3412">Ads Data Analyst</text>
+  <text x="1210" y="599" text-anchor="middle" class="body" fill="#c2410c"><tspan x="1210">Decision 2: Is campaign data</tspan><tspan x="1210" dy="23">needed to answer the question?</tspan></text>
+
+  <path d="M1210 642 L1210 700" stroke="#e8590c" marker-end="url(#arrow-orange)" class="line"/>
+  <text x="1230" y="680" class="arrow-label" fill="#c2410c">Tool call</text>
+  <rect x="950" y="707" width="520" height="90" rx="16" fill="#ccfbf1" stroke="#0f766e" class="box"/>
+  <text x="1210" y="745" text-anchor="middle" style="font:700 21px monospace" fill="#115e59">get_campaign_metrics(campaign_id)</text>
+  <text x="1210" y="775" text-anchor="middle" class="small" fill="#0f766e">Structured input  →  structured output</text>
+  <path d="M1210 797 L1210 844" stroke="#0f766e" marker-end="url(#arrow-teal)" class="line"/>
+  <rect x="950" y="851" width="520" height="90" rx="16" fill="#f1f3f5" stroke="#495057" class="box"/>
+  <text x="1210" y="888" text-anchor="middle" class="box-title" fill="#343a40">Python + pandas</text>
+  <text x="1210" y="918" text-anchor="middle" class="small" fill="#495057">Filter and aggregate  data/ads.csv</text>
+
+  <rect x="130" y="707" width="600" height="234" rx="18" fill="#fff9db" stroke="#f59f00" class="box"/>
+  <text x="430" y="749" text-anchor="middle" class="box-title" fill="#8a4b08">What the lab makes visible</text>
+  <text x="175" y="790" class="body" fill="#5c3b08"><tspan x="175">1. Model chooses an agent</tspan><tspan x="175" dy="28">2. Specialist chooses a tool</tspan><tspan x="175" dy="28">3. Runtime executes deterministic code</tspan><tspan x="175" dy="28">4. Tool result returns to the model</tspan><tspan x="175" dy="28">5. Model explains the observation</tspan></text>
+  <path d="M950 896 C850 870 810 810 745 765" stroke="#0f766e" stroke-dasharray="10 9" marker-end="url(#arrow-teal)" class="line"/>
+  <text x="855" y="842" class="arrow-label" fill="#0f766e">Observation</text>
+  <text x="800" y="978" text-anchor="middle" class="body" fill="#495057">Start with one observable loop. Add complexity only after you can explain and measure it.</text>
+</svg>

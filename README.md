@@ -8,6 +8,16 @@ The project starts with a simple local agent and incrementally evolves into a mu
 
 ---
 
+## Mechanics-First Agent Engineering
+
+> Build the smallest observable agent loop, understand every decision and boundary, then scale the system.
+
+![Mechanics-First Agent Engineering architecture](docs/assets/mechanics-first-agent-architecture.svg)
+
+The editable source is available in [`docs/assets/mechanics-first-agent-architecture.excalidraw`](docs/assets/mechanics-first-agent-architecture.excalidraw).
+
+---
+
 ## Current Architecture
 
 ```text
