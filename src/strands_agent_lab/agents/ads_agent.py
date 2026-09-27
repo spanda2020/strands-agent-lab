@@ -38,9 +38,25 @@ ads_agent = Agent(
 
     system_prompt=ADS_ANALYST_INSTRUCTIONS.strip(),
 )
+
 if __name__ == "__main__":
-    response = ads_agent(
-        "What does CTR tell me about an advertising campaign?"
+    result = ads_agent(
+        "What are the performance metrics for campaign C003?"
     )
 
-    print(response)
+    print("\n===== TYPE =====")
+    print(type(result))
+
+    print("\n===== RESULT =====")
+    print(result)
+
+    print("\n===== ATTRIBUTES =====")
+    print(dir(result))
+    print("\n===== MESSAGE =====")
+
+    print(result.message)
+    print(type(result.message))
+
+    print("\n===== STRUCTURED OUTPUT =====")
+    print(result.structured_output)
+    print(type(result.structured_output))
