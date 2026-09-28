@@ -23,13 +23,30 @@ def load_campaign_metrics(campaign_id: str) -> CampaignMetrics:
     if campaign.empty:
         raise ValueError(f"Campaign {campaign_id} not found")
 
+    # Aggregate base metrics
+    impressions = int(campaign["impressions"].sum())
+    clicks = int(campaign["clicks"].sum())
+    spend = float(campaign["spend"].sum())
+    conversions = int(campaign["conversions"].sum())
+    revenue = float(campaign["revenue"].sum())
+
+    # Calculate derived metrics
+    ctr = (clicks / impressions * 100) if impressions else 0.0
+    cpc = (spend / clicks) if clicks else 0.0
+    conversion_rate = (conversions / clicks * 100) if clicks else 0.0
+    roas = (revenue / spend) if spend else 0.0
+
     return CampaignMetrics(
         campaign_id=campaign_id,
-        impressions=int(campaign["impressions"].sum()),
-        clicks=int(campaign["clicks"].sum()),
-        spend=float(campaign["spend"].sum()),
-        conversions=int(campaign["conversions"].sum()),
-        revenue=float(campaign["revenue"].sum()),
+        impressions=impressions,
+        clicks=clicks,
+        spend=spend,
+        conversions=conversions,
+        revenue=revenue,
+        ctr=ctr,
+        cpc=cpc,
+        conversion_rate=conversion_rate,
+        roas=roas,
     )
 
 
